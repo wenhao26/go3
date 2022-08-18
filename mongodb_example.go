@@ -184,7 +184,7 @@ func FindAll2(filter interface{}) {
 	fmt.Println("查询多个文档：", resultsM)
 }
 
-func FindAll3(filter interface{})  {
+func FindAll3(filter interface{}) {
 	findOptions := options.Find()
 
 	results := make([]NoticeTest, 0)
