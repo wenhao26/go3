@@ -16,6 +16,12 @@ func Consumer(conn *amqp.Connection, queueName string) {
 	if err != nil {
 		log.Printf("Fatal error Channel: %s \n", err)
 	}
+
+	ch.Qos(
+		1000,
+		0,
+		false,
+	)
 	defer ch.Close()
 
 	messages, err := ch.Consume(
