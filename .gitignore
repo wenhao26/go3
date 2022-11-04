@@ -1,3 +1,5 @@
 .idea
 .DS_Store
 config.toml
+example/ipregion/ip.db
+example/ipregion/data
