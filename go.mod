@@ -11,6 +11,7 @@ require (
 	github.com/gin-gonic/gin v1.8.1
 	github.com/go-redis/redis/v8 v8.11.5 // indirect
 	github.com/gocolly/colly/v2 v2.1.0 // indirect
+	github.com/influxdata/influxdb-client-go/v2 v2.12.1 // indirect
 	github.com/juju/ratelimit v1.0.2
 	github.com/labstack/gommon v0.3.1
 	github.com/mattn/go-sqlite3 v1.14.16 // indirect
