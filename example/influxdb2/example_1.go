@@ -20,7 +20,7 @@ func main() {
 
 	result, err := queryAPI.Query(context.Background(), query)
 	if err != nil {
-		fmt.Println(err)
+		panic(err)
 	}
 
 	for result.Next() {

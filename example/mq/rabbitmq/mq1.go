@@ -28,7 +28,7 @@ func main() {
 		nil,
 	)
 	if err != nil {
-		panic(fmt.Errorf("声明交换机失败: %s \n", err))
+		fmt.Println(fmt.Errorf("声明交换机失败: %s \n", err))
 	}
 	defer mq.Channel.Close()
 
