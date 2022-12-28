@@ -21,6 +21,7 @@ require (
 	github.com/labstack/gommon v0.3.1
 	github.com/mattn/go-sqlite3 v1.14.16 // indirect
 	github.com/meilisearch/meilisearch-go v0.21.1 // indirect
+	github.com/nsqio/go-nsq v1.1.0 // indirect
 	github.com/panjf2000/ants/v2 v2.5.0
 	github.com/robfig/cron v1.2.0 // indirect
 	github.com/shirou/gopsutil v3.21.11+incompatible // indirect
