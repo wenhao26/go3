@@ -41,7 +41,7 @@ func main() {
 		Title: "消费者1",
 	})
 
-	if err := consumer.ConnectToNSQLookupd("119.91.202.245:4161"); err != nil {
+	if err := consumer.ConnectToNSQLookupd("127.0.0.1:4161"); err != nil {
 		panic(err)
 	}
 
