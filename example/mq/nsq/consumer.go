@@ -52,5 +52,5 @@ func main() {
 	signal.Notify(c, syscall.SIGINT) // 转发键盘中断信号到c
 	<-c                              // 阻塞
 
-	//consumer.Stop()
+	consumer.Stop() // 优雅地停止消费者
 }

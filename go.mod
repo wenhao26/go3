@@ -3,6 +3,7 @@ module coinsky_go_project
 go 1.16
 
 require (
+	github.com/Jeffail/tunny v0.1.4 // indirect
 	github.com/PuerkitoBio/goquery v1.8.0 // indirect
 	github.com/Shopify/sarama v1.37.2 // indirect
 	github.com/antchfx/htmlquery v1.2.5 // indirect
