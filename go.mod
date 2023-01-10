@@ -13,11 +13,14 @@ require (
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/gin-contrib/cors v1.4.0
 	github.com/gin-gonic/gin v1.8.1
+	github.com/go-ini/ini v1.67.0 // indirect
 	github.com/go-redis/redis/v8 v8.11.5 // indirect
+	github.com/go-sql-driver/mysql v1.7.0 // indirect
 	github.com/gocolly/colly/v2 v2.1.0 // indirect
 	github.com/google/uuid v1.3.0 // indirect
 	github.com/hibiken/asynq v0.23.0 // indirect
 	github.com/influxdata/influxdb-client-go/v2 v2.12.1 // indirect
+	github.com/jinzhu/gorm v1.9.16 // indirect
 	github.com/juju/ratelimit v1.0.2
 	github.com/labstack/gommon v0.3.1
 	github.com/mattn/go-sqlite3 v1.14.16 // indirect
@@ -37,4 +40,5 @@ require (
 	golang.org/x/net v0.4.0 // indirect
 	golang.org/x/time v0.3.0 // indirect
 	google.golang.org/protobuf v1.28.1 // indirect
+	gopkg.in/ini.v1 v1.66.4 // indirect
 )

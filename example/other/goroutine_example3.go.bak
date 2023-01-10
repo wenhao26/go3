@@ -1,0 +1,64 @@
+package main
+
+import (
+	"fmt"
+	"sync"
+)
+
+// 启动一个协程，生产任务，写入到jobCh
+func genJob(n int) <-chan int {
+	jobCh := make(chan int, 200)
+	go func() {
+		for i := 0; i < n; i++ {
+			jobCh <- i
+		}
+		close(jobCh)
+	}()
+	return jobCh
+}
+
+var wg4 = &sync.WaitGroup{}
+
+func workerPool(n int, jobCh <-chan int, retCh chan<- string, ) {
+	for i := 0; i < n; i++ {
+		wg4.Add(1)
+		go worker(i, jobCh, retCh)
+	}
+}
+
+func worker(tid int, jobCh <-chan int, retCh chan<- string) {
+	cnt := 0
+	for job := range jobCh {
+		cnt++
+		ret := fmt.Sprintf("worker %d processed job: %d, it's the %dth processed by me.", tid, job, cnt)
+		retCh <- ret
+	}
+	wg4.Done()
+}
+
+func main() {
+	jobCh := genJob(100000)
+	retCh := make(chan string, 10000)
+
+	workerPool(5, jobCh, retCh)
+
+	/*time.Sleep(time.Second)
+	close(retCh)
+	for ret := range retCh {
+		fmt.Println(ret)
+	}*/
+
+	wg4.Wait()
+	close(retCh)
+	for {
+		select {
+		case r, ok := <-retCh:
+			if !ok {
+				fmt.Println("done")
+				return
+			}
+			fmt.Println("job =>", r)
+		}
+	}
+
+}
